@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -59,7 +59,16 @@
         <h1 class="main-title">эффективные решения для вашего бизнеса</h1>
                 <!-- </div> -->
                 <div class="hero-button">
-                <button class="button-order" type="button" width="">Заказать услугу</button>
+                <button class="button-order" data-modal-open type="button" width="">Заказать услугу</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                    <button class="close" data-modal-close>
+                        <svg class="close-icon" width="30" height="30">
+                            <use href="./images/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -126,9 +135,21 @@
                 <!--Чем мы занимаемся-->
                 <h2 class="heading">Чем мы занимаемся</h2>
                 <ul class="img-list">
-                <li> <img src="./images/telefon.jpg" width="370" alt="разработка приложений на мобильный телефон"></li>
-                <li> <img src="./images/table.jpg" width="370" alt="компьтерный стол"></li>
-                <li> <img src="./images/planshet.jpg" width="370" alt="планшет"></li>
+                <li class="img-list-item"> <img src="./images/telefon.jpg" width="370" alt="разработка приложений на мобильный телефон">
+                <div class="what-we-do-overlay">
+                    <p class="what-we-do-overlay-text">Десктопные приложения</p>
+                </div>
+                </li>
+                <li class="img-list-item"> <img src="./images/table.jpg" width="370" alt="компьтерный стол">
+                <div class="what-we-do-overlay">
+                    <h3 class="what-we-do-overlay-text">Мобильные приложения</p>
+                </div>
+                </li>
+                <li class="img-list-item"> <img src="./images/planshet.jpg" width="370" alt="планшет">
+                <div class="what-we-do-overlay">
+                    <p class="what-we-do-overlay-text">Дизайнерские решения</p>
+                </div>
+                </li>
                 </ul>
             </div>
         </section>
@@ -420,5 +441,41 @@
         </div>
         
     </footer>
+<!-- Скрипт на модалку -->
+    <script src="./js/modal.js"></script>
+
+    <!-- Practice -->
+    <article class="product">
+        <div class="product-thumb">
+            <img src="./images/apples.jpg" alt="Яблоки" />
+    
+            <div class="product-overlay">
+                <div class="product-actions">
+                    <button aria-label="В избранное" class="item">
+                        <svg class="icon">
+                            <use href="./images/sprite.svg#star"></use>
+                        </svg>
+                    </button>
+    
+                    <button aria-label="Написать отзыв" class="item">
+                        <svg class="icon">
+                            <use href="./images/sprite.svg#edit"></use>
+                        </svg>
+                    </button>
+    
+                    <button aria-label="В закладки" class="item">
+                        <svg class="icon">
+                            <use href="./images/sprite.svg#home"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="product-meta">
+            <h2 class="product-name">Красные яблоки</h2>
+            <p class="product-price">Цена: 100 кредитов</p>
+        </div>
+    </article>
 </body>
 </html>
