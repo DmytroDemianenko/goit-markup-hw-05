@@ -355,7 +355,8 @@ img {
   
   margin:0; 
   align-items: center;
-  justify-content: center;
+  padding top: 27
+  text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
 }
