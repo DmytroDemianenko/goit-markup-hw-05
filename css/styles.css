@@ -361,6 +361,9 @@ img {
 }
 .what-we-do-overlay {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0%;
   left: 0%;
   width: 100%;
@@ -369,7 +372,7 @@ img {
 }
 .what-we-do-overlay-text {
   margin: 0;
-  padding-top: 27px;
+  display: flex;
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
